@@ -77,6 +77,7 @@ public struct OVPlayerRepresentable: UIViewControllerRepresentable {
     }
 
     public static func dismantleUIViewController(_ uiViewController: AVPlayerViewController, coordinator: OVPlayerCoordinator) {
+        print("OVPlayerRepresentable: dismantleUIViewController")
         coordinator.removeAllObservers()
     }
 }

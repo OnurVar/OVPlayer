@@ -10,9 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         VStack {
-            OVPlayerView()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)

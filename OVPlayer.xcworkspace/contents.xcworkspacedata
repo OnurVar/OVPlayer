@@ -13,12 +13,6 @@
    <Group
       location = "group:Sources"
       name = "Sources">
-      <FileRef
-         location = "group:OVPlayerObserver.swift">
-      </FileRef>
-      <FileRef
-         location = "group:OVPlayerRepresentable.swift">
-      </FileRef>
       <Group
          location = "group:Model"
          name = "Model">
@@ -36,10 +30,16 @@
          </FileRef>
       </Group>
       <FileRef
-         location = "group:OVPlayerView.swift">
+         location = "group:OVPlayerCoordinator.swift">
       </FileRef>
       <FileRef
-         location = "group:OVPlayerCoordinator.swift">
+         location = "group:OVPlayerObserver.swift">
+      </FileRef>
+      <FileRef
+         location = "group:OVPlayerRepresentable.swift">
+      </FileRef>
+      <FileRef
+         location = "group:OVPlayerView.swift">
       </FileRef>
    </Group>
 </Workspace>

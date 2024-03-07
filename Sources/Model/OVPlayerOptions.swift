@@ -11,7 +11,7 @@ public struct OVPlayerOptions {
     let loopVideoWhenEndReached: Bool
     let loopRangeInMilliseconds: ClosedRange<Double>?
 
-    init(
+    public init(
         autoPlayVideoWhenReady: Bool = true,
         isMuted: Bool = false,
         loopVideoWhenEndReached: Bool = true,

@@ -33,14 +33,14 @@ class OVPlayerObserver: NSObject, OVPlayerObserverProtocol {
 
     var delegate: OVPlayerObserverDelegate?
 
-    var currentTimeObserver: Any?
-    var playerReachEndObserver: Any?
+    private var currentTimeObserver: Any?
+    private var playerReachEndObserver: Any?
 
-    var timeControlStatusContext = 0
-    var itTimeControlStatusContextEnabled = false
+    private var timeControlStatusContext = 0
+    private var isTimeControlStatusContextEnabled = false
 
-    var statusContext = 1
-    var isStatusContextEnabled = false
+    private var statusContext = 1
+    private var isStatusContextEnabled = false
 
     // MARK: Life Cycle
 
@@ -49,7 +49,7 @@ class OVPlayerObserver: NSObject, OVPlayerObserverProtocol {
     }
 
     deinit {
-        print("CoreVideoPlayerObserver: deinit")
+        print("OVPlayerObserver: deinit")
     }
 
     // MARK: Methods
@@ -80,13 +80,13 @@ class OVPlayerObserver: NSObject, OVPlayerObserverProtocol {
 
     func addTimeControlStatusObserver(toPlayer player: AVPlayer) {
         player.addObserver(self, forKeyPath: OVPlayerObserver.kTimeControlStatus, options: [.new, .old], context: &timeControlStatusContext)
-        itTimeControlStatusContextEnabled = true
+        isTimeControlStatusContextEnabled = true
     }
 
     func removeTimeControlStatusObserver(fromPlayer player: AVPlayer) {
         guard itTimeControlStatusContextEnabled else { return }
         player.removeObserver(self, forKeyPath: OVPlayerObserver.kTimeControlStatus, context: &timeControlStatusContext)
-        itTimeControlStatusContextEnabled = false
+        isTimeControlStatusContextEnabled = false
     }
 
     func addStatusObserver(toPlayerItem playerItem: AVPlayerItem) {
