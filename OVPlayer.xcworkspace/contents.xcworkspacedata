@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:OVPlayerExample/OVPlayerExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <Group
+      location = "group:Sources"
+      name = "Sources">
+      <FileRef
+         location = "group:OVPlayerObserver.swift">
+      </FileRef>
+      <FileRef
+         location = "group:OVPlayerRepresentable.swift">
+      </FileRef>
+      <Group
+         location = "group:Model"
+         name = "Model">
+         <FileRef
+            location = "group:OVPlayerPlayerActionPublisherType.swift">
+         </FileRef>
+         <FileRef
+            location = "group:OVPlayerOptions.swift">
+         </FileRef>
+         <FileRef
+            location = "group:OVPlayerStatusObserverType.swift">
+         </FileRef>
+         <FileRef
+            location = "group:OVPlayerTimerObserverType.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:OVPlayerView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:OVPlayerCoordinator.swift">
+      </FileRef>
+   </Group>
+</Workspace>
