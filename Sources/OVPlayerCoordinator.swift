@@ -18,7 +18,7 @@ public class OVPlayerCoordinator: NSObject {
     private var url: URL? = nil
     private let observer = OVPlayerObserver()
     private var cancellables = Set<AnyCancellable>()
-    
+
     let player = AVPlayer()
     var options: OVPlayerOptions?
 
@@ -54,6 +54,8 @@ public class OVPlayerCoordinator: NSObject {
                 self.playVideo()
             case .Pause:
                 self.pauseVideo()
+            case .GoTo(let milliSeconds):
+                self.goTo(milliSeconds: milliSeconds)
             }
         }
         .store(in: &cancellables)
@@ -149,14 +151,10 @@ public class OVPlayerCoordinator: NSObject {
         player.pause()
     }
 
-    /// Check if the player should loop in given range
-    private func checkLoopInRange(currentTimeInMilliSeconds: Double, loopRangeInMilliseconds: ClosedRange<Double>) {
-        if currentTimeInMilliSeconds > loopRangeInMilliseconds.upperBound {
-            let lowerBounds = loopRangeInMilliseconds.lowerBound
-            let time: CMTime = .init(seconds: lowerBounds / 1000, preferredTimescale: 1000)
-            print("lowerBounds", lowerBounds, time)
-            player.seek(to: time, toleranceBefore: .zero, toleranceAfter: .zero)
-        }
+    /// Goes to the given milliSeconds
+    private func goTo(milliSeconds: Double) {
+        let time: CMTime = .init(seconds: milliSeconds / 1000, preferredTimescale: 1000)
+        player.seek(to: time, toleranceBefore: .zero, toleranceAfter: .zero)
     }
 }
 
@@ -166,9 +164,10 @@ extension OVPlayerCoordinator: OVPlayerObserverDelegate {
     func didCurrentTimeChange(currentTimeInMilliSeconds: Double) {
         timerObserver?.send(.CurrentTimeChanged(milliSeconds: currentTimeInMilliSeconds))
 
-        // Check if player should loop in given range
-        if let loopRangeInMilliseconds = options?.loopRangeInMilliseconds {
-            checkLoopInRange(currentTimeInMilliSeconds: currentTimeInMilliSeconds, loopRangeInMilliseconds: loopRangeInMilliseconds)
+        // Check if loopRangeInMilliseconds is set and the currentTimeInMilliSeconds is greater than the upperBound, then go to the lowerBound
+        if let loopRangeInMilliseconds = options?.loopRangeInMilliseconds, currentTimeInMilliSeconds > loopRangeInMilliseconds.upperBound {
+            let lowerBoundInMilliSeconds = loopRangeInMilliseconds.lowerBound
+            goTo(milliSeconds: lowerBoundInMilliSeconds)
         }
     }
 

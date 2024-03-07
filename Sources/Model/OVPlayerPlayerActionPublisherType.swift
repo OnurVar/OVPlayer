@@ -8,4 +8,5 @@
 public enum OVPlayerPlayerActionPublisherType {
     case Play
     case Pause
+    case GoTo(milliSeconds: Double)
 }
