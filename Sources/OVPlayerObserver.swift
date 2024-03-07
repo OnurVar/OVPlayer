@@ -84,7 +84,7 @@ class OVPlayerObserver: NSObject, OVPlayerObserverProtocol {
     }
 
     func removeTimeControlStatusObserver(fromPlayer player: AVPlayer) {
-        guard itTimeControlStatusContextEnabled else { return }
+        guard isTimeControlStatusContextEnabled else { return }
         player.removeObserver(self, forKeyPath: OVPlayerObserver.kTimeControlStatus, context: &timeControlStatusContext)
         isTimeControlStatusContextEnabled = false
     }
