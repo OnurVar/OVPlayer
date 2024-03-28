@@ -7,102 +7,130 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62260DFC2B99539F009104F4 /* OVPlayerExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62260DFB2B99539F009104F4 /* OVPlayerExampleApp.swift */; };
-		62260DFE2B99539F009104F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62260DFD2B99539F009104F4 /* ContentView.swift */; };
-		62260E002B99539F009104F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62260DFF2B99539F009104F4 /* Assets.xcassets */; };
-		62260E032B99539F009104F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62260E022B99539F009104F4 /* Preview Assets.xcassets */; };
+		62CD1F7A2BB6397600876AA6 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CD1F792BB6397600876AA6 /* ExampleApp.swift */; };
+		62CD1F7C2BB6397600876AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CD1F7B2BB6397600876AA6 /* ContentView.swift */; };
+		62CD1F7E2BB6397700876AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CD1F7D2BB6397700876AA6 /* Assets.xcassets */; };
+		62CD1F812BB6397700876AA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CD1F802BB6397700876AA6 /* Preview Assets.xcassets */; };
+		62CD1F892BB63A8100876AA6 /* OVPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CD1F882BB63A8100876AA6 /* OVPlayer.framework */; };
+		62CD1F8A2BB63A8100876AA6 /* OVPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62CD1F882BB63A8100876AA6 /* OVPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		62CD1F8B2BB63A8100876AA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				62CD1F8A2BB63A8100876AA6 /* OVPlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		62260DF82B99539F009104F4 /* OVPlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OVPlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		62260DFB2B99539F009104F4 /* OVPlayerExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OVPlayerExampleApp.swift; sourceTree = "<group>"; };
-		62260DFD2B99539F009104F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		62260DFF2B99539F009104F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		62260E022B99539F009104F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62CD1F762BB6397600876AA6 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CD1F792BB6397600876AA6 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
+		62CD1F7B2BB6397600876AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		62CD1F7D2BB6397700876AA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62CD1F802BB6397700876AA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62CD1F882BB63A8100876AA6 /* OVPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OVPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		62260DF52B99539F009104F4 /* Frameworks */ = {
+		62CD1F732BB6397600876AA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CD1F892BB63A8100876AA6 /* OVPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62260DEF2B99539F009104F4 = {
+		62CD1F6D2BB6397600876AA6 = {
 			isa = PBXGroup;
 			children = (
-				62260DFA2B99539F009104F4 /* OVPlayerExample */,
-				62260DF92B99539F009104F4 /* Products */,
+				62CD1F782BB6397600876AA6 /* Example */,
+				62CD1F772BB6397600876AA6 /* Products */,
+				62CD1F872BB63A8100876AA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		62260DF92B99539F009104F4 /* Products */ = {
+		62CD1F772BB6397600876AA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				62260DF82B99539F009104F4 /* OVPlayerExample.app */,
+				62CD1F762BB6397600876AA6 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		62260DFA2B99539F009104F4 /* OVPlayerExample */ = {
+		62CD1F782BB6397600876AA6 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				62260DFB2B99539F009104F4 /* OVPlayerExampleApp.swift */,
-				62260DFD2B99539F009104F4 /* ContentView.swift */,
-				62260DFF2B99539F009104F4 /* Assets.xcassets */,
-				62260E012B99539F009104F4 /* Preview Content */,
+				62CD1F792BB6397600876AA6 /* ExampleApp.swift */,
+				62CD1F7B2BB6397600876AA6 /* ContentView.swift */,
+				62CD1F7D2BB6397700876AA6 /* Assets.xcassets */,
+				62CD1F7F2BB6397700876AA6 /* Preview Content */,
 			);
-			path = OVPlayerExample;
+			path = Example;
 			sourceTree = "<group>";
 		};
-		62260E012B99539F009104F4 /* Preview Content */ = {
+		62CD1F7F2BB6397700876AA6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				62260E022B99539F009104F4 /* Preview Assets.xcassets */,
+				62CD1F802BB6397700876AA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62CD1F872BB63A8100876AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62CD1F882BB63A8100876AA6 /* OVPlayer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		62260DF72B99539F009104F4 /* OVPlayerExample */ = {
+		62CD1F752BB6397600876AA6 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 62260E062B99539F009104F4 /* Build configuration list for PBXNativeTarget "OVPlayerExample" */;
+			buildConfigurationList = 62CD1F842BB6397700876AA6 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				62260DF42B99539F009104F4 /* Sources */,
-				62260DF52B99539F009104F4 /* Frameworks */,
-				62260DF62B99539F009104F4 /* Resources */,
+				62CD1F722BB6397600876AA6 /* Sources */,
+				62CD1F732BB6397600876AA6 /* Frameworks */,
+				62CD1F742BB6397600876AA6 /* Resources */,
+				62CD1F8B2BB63A8100876AA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OVPlayerExample;
-			productName = OVPlayerExample;
-			productReference = 62260DF82B99539F009104F4 /* OVPlayerExample.app */;
+			name = Example;
+			productName = Example;
+			productReference = 62CD1F762BB6397600876AA6 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		62260DF02B99539F009104F4 /* Project object */ = {
+		62CD1F6E2BB6397600876AA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					62260DF72B99539F009104F4 = {
+					62CD1F752BB6397600876AA6 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
-			buildConfigurationList = 62260DF32B99539F009104F4 /* Build configuration list for PBXProject "OVPlayerExample" */;
+			buildConfigurationList = 62CD1F712BB6397600876AA6 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +138,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 62260DEF2B99539F009104F4;
-			productRefGroup = 62260DF92B99539F009104F4 /* Products */;
+			mainGroup = 62CD1F6D2BB6397600876AA6;
+			productRefGroup = 62CD1F772BB6397600876AA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				62260DF72B99539F009104F4 /* OVPlayerExample */,
+				62CD1F752BB6397600876AA6 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		62260DF62B99539F009104F4 /* Resources */ = {
+		62CD1F742BB6397600876AA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62260E032B99539F009104F4 /* Preview Assets.xcassets in Resources */,
-				62260E002B99539F009104F4 /* Assets.xcassets in Resources */,
+				62CD1F812BB6397700876AA6 /* Preview Assets.xcassets in Resources */,
+				62CD1F7E2BB6397700876AA6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		62260DF42B99539F009104F4 /* Sources */ = {
+		62CD1F722BB6397600876AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62260DFE2B99539F009104F4 /* ContentView.swift in Sources */,
-				62260DFC2B99539F009104F4 /* OVPlayerExampleApp.swift in Sources */,
+				62CD1F7C2BB6397600876AA6 /* ContentView.swift in Sources */,
+				62CD1F7A2BB6397600876AA6 /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		62260E042B99539F009104F4 /* Debug */ = {
+		62CD1F822BB6397700876AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		62260E052B99539F009104F4 /* Release */ = {
+		62CD1F832BB6397700876AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,14 +292,14 @@
 			};
 			name = Release;
 		};
-		62260E072B99539F009104F4 /* Debug */ = {
+		62CD1F852BB6397700876AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OVPlayerExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -283,8 +311,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onurvar.OVPlayerExample;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onurvar.OVPlayer.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -292,14 +320,14 @@
 			};
 			name = Debug;
 		};
-		62260E082B99539F009104F4 /* Release */ = {
+		62CD1F862BB6397700876AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OVPlayerExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,8 +339,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onurvar.OVPlayerExample;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onurvar.OVPlayer.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,25 +351,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		62260DF32B99539F009104F4 /* Build configuration list for PBXProject "OVPlayerExample" */ = {
+		62CD1F712BB6397600876AA6 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62260E042B99539F009104F4 /* Debug */,
-				62260E052B99539F009104F4 /* Release */,
+				62CD1F822BB6397700876AA6 /* Debug */,
+				62CD1F832BB6397700876AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		62260E062B99539F009104F4 /* Build configuration list for PBXNativeTarget "OVPlayerExample" */ = {
+		62CD1F842BB6397700876AA6 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62260E072B99539F009104F4 /* Debug */,
-				62260E082B99539F009104F4 /* Release */,
+				62CD1F852BB6397700876AA6 /* Debug */,
+				62CD1F862BB6397700876AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 62260DF02B99539F009104F4 /* Project object */;
+	rootObject = 62CD1F6E2BB6397600876AA6 /* Project object */;
 }

@@ -1,14 +1,14 @@
 //
-//  OVPlayerExampleApp.swift
-//  OVPlayerExample
+//  ExampleApp.swift
+//  Example
 //
-//  Created by Onur Var on 7.03.2024.
+//  Created by Onur Var on 29.03.2024.
 //
 
 import SwiftUI
 
 @main
-struct OVPlayerExampleApp: App {
+struct ExampleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
