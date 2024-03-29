@@ -46,6 +46,9 @@ public class OVPlayerCoordinator: NSObject {
         observer.addTimeControlStatusObserver(toPlayer: player)
         observer.addTimeObserver(toPlayer: player)
 
+        // Set AVPlayer settings
+        player.audiovisualBackgroundPlaybackPolicy = .continuesIfPossible
+
         // Sink the overlayActionPublisher
         playerActionPublisher?.sink { [weak self] action in
             guard let self else { return }
@@ -63,6 +66,7 @@ public class OVPlayerCoordinator: NSObject {
 
     deinit {
         print("OVPlayerCoordinator: deinit")
+        disableAudioSession()
     }
 
     func removeAllObservers() {
@@ -107,6 +111,9 @@ public class OVPlayerCoordinator: NSObject {
         let playerItem = AVPlayerItem(url: url)
         playerItem.preferredForwardBufferDuration = 10
         player.replaceCurrentItem(with: playerItem)
+
+        // Enable audio session
+        enableAudioSession()
 
         // Set the player's volume and mute status
         player.isMuted = options?.isMuted ?? false
@@ -155,6 +162,25 @@ public class OVPlayerCoordinator: NSObject {
     private func goTo(milliSeconds: Double) {
         let time: CMTime = .init(seconds: milliSeconds / 1000, preferredTimescale: 1000)
         player.seek(to: time, toleranceBefore: .zero, toleranceAfter: .zero)
+    }
+
+    // MARK: AVAudioSession Methods
+
+    func enableAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+    }
+
+    func disableAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        } catch {
+            print(error)
+        }
     }
 }
 
