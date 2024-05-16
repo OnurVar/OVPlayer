@@ -9,16 +9,3 @@ public enum OVPlayerStatusObserverType {
     case PlayerStatusChanged(type: OVPlayerPlayerStatusType)
     case VideoStatusChanged(type: OVPlayerVideoStatusType)
 }
-
-public enum OVPlayerPlayerStatusType {
-    case Playing
-    case Paused
-    case Loading
-}
-
-public enum OVPlayerVideoStatusType {
-    case NotReady
-    case Ready
-    case Failed
-    case Unknown
-}
